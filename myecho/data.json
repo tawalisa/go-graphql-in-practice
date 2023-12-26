@@ -1,0 +1,30 @@
+{ "data":
+    [ {
+      "url": "test1",
+      "body": "{\"data\": \"test1 p1\"}",
+      "parameters": {
+        "p1": "p1",
+        "p2": "p2"
+      }
+    },
+      {
+        "url": "test1",
+        "body": "{\"data\": \"test1 p3\"}",
+        "parameters": {
+          "p1": "p2",
+          "p2": "p3"
+        }
+      },
+      {
+        "url": "test2",
+        "body": "{\"data\": \"test2\"}",
+        "request-body": "{\"aa\": 1,\"vvb\"：\"test\"}"
+      },
+      {
+        "url": "test3",
+        "body": "{\"data\": \"test3\"}",
+        "request-body": "aacbba\"current_to\":\"2023-11-14T02:03:121Z\"....aa@@!"
+      }
+
+    ]
+}

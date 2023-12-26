@@ -1,0 +1,50 @@
+type Query {
+    ESGScores(filter: ESGScoresFilter): [ESG!]!
+}
+
+input ESGScoresFilter {
+    and: [ESGScoresFilter!]
+    or: [ESGScoresFilter!]
+    name: String
+    address: String
+    ids: [ID!]
+    lt: ESGScoresFilterAttributes
+    gt: ESGScoresFilterAttributes
+}
+
+input ESGScoresFilterAttributes {
+    name: String
+    address: String
+}
+
+type ESG {
+    company: Company!
+}
+
+type Company {
+    id: ID
+    name: String
+    address: String
+    scores(filter: ScoresFilter): [Scores]
+}
+
+input ScoresFilter {
+    score: Int
+    calculateDate: String
+    scoreGrade: String
+    ids: [ID!]
+    and: [ScoresFilter!]
+    or: [ScoresFilter!]
+    lt: ScoresFilterFilterAttributes
+    gt: ScoresFilterFilterAttributes
+}
+
+input ScoresFilterFilterAttributes {
+    score: Int
+}
+type Scores {
+    id: ID
+    score: Int
+    calculateDate: String
+    scoreGrade: String
+}
