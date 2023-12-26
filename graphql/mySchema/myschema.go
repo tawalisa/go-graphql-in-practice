@@ -7,3 +7,10 @@ type Score struct {
 	CalculateDate string
 	ScoreGrade    string
 }
+
+type Company struct {
+	ID      int
+	Name    string
+	Address string
+	Scores  []Score
+}

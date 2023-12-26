@@ -28,6 +28,14 @@ type Company {
     scores(filter: ScoresFilter): [Scores]
 }
 
+type Scores {
+    id: ID
+    score: Int
+    calculateDate: String
+    scoreGrade: String
+}
+
+
 input ScoresFilter {
     score: Int
     calculateDate: String
